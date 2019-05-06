@@ -1,12 +1,19 @@
 # -*- coding: utf-8 -*-
-import numpy as np
-import tensorflow as tf
-import matplotlib.pyplot as plt
-from basics.classification import Classification
+import optparse
+from basics.regression_model import LinearRegression
 
-def main(argc=None):
-	c = Classification()
-	c.compute_gradient()
+
+def scan():
+	parser = optparse.OptionParser("usage: %prog -i <input_file> -o <output_file>")
+	parser.add_option("-i", dest="input_file", type="string", help="specify input xlsx file")
+	parser.add_option("-o", dest="output_file", type="string", help="specify output xlsx file")
+	(options, args) = parser.parse_args()
+	print(options, args)
+
+
+def main():
+	model = LinearRegression()
+	model()
 
 
 if __name__ == '__main__':
