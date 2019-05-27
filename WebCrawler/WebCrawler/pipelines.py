@@ -7,5 +7,13 @@
 
 
 class WebcrawlerPipeline(object):
+
     def process_item(self, item, spider):
+        if item['code'] != 0:
+            return None
+        contents = item['data']['content']
+        for content in contents:
+            title = content['head_title']
+            questions = content['questions']
+            print(questions)
         return item

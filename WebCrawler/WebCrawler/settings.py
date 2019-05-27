@@ -22,9 +22,9 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 
 
 # Enable or disable spider middlewares
-# ITEM_PIPELINES = {
-#    'WebCrawler.pipelines.WebcrawlerPipeline': 300,
-# }
+ITEM_PIPELINES = {
+   'WebCrawler.pipelines.WebcrawlerPipeline': 300,
+}
 
 # SPIDER_MIDDLEWARES = {
 #    'WebCrawler.middlewares.WebcrawlerSpiderMiddleware': 543,
